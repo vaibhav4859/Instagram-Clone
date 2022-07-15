@@ -1,0 +1,4 @@
+.boxes {
+    display: flex;
+    flex-direction: column;
+}

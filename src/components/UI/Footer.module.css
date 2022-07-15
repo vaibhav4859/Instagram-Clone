@@ -1,0 +1,11 @@
+.footer{
+    margin: 4rem 0;
+    align-items: center;
+    text-align: center;
+}
+
+.line1 a,.line2 a, .line3 span{
+    font-size: 13px;
+    color: #8e8e8e;
+    padding-left: 1rem;
+}

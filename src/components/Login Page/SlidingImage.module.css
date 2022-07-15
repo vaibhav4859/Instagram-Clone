@@ -1,0 +1,17 @@
+.background-image{
+    height: 581.15px;
+    background-image: url('https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png');
+    background-repeat: no-repeat;
+    margin-left: 17.5rem;
+    margin-top: 2rem;
+    padding-top: 1.6rem;
+    padding-right: 2rem;
+}
+
+.image {
+    height: 538.84px;
+    padding-left: 9.7rem;
+    -webkit-transition: opacity 1.5s ease-out;
+    transition: opacity 1.5s ease-out;
+}
+

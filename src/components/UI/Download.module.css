@@ -1,0 +1,21 @@
+.box{
+    width: 25rem;
+    height: 6rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.images {
+    padding-top: 1rem;
+    display: flex;
+}
+
+.images img{
+    height: 3rem;
+    width: 9.5rem;
+}
