@@ -5,7 +5,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { updatePassword } from '../../lib/api';
+import { isVaildUser, updatePassword } from '../../lib/api';
 
 import OrContainer from '../UI/OrContainer';
 import classes from './ForgotPasswordForm.module.css'
@@ -16,20 +16,24 @@ const initialValues = {
 }
 
 const validationSchema = Yup.object({
-  email: Yup.string().email('No users found'),
-  password: Yup.string().required('Required').min(6)
+  email: Yup.string().email(`Please enter the valid email format`).required('Email is required'),
+  password: Yup.string().required('Password should conatin more than 6 characters.').min(6)
 })
 
 function ForgotPasswordForm() {
   const navigate = useNavigate();
+  const [emailValid, setEmailValid] = useState(false);
   const [showVisibility, setShowVisibility] = useState(false);
   const showVisibilityHandler = () => setShowVisibility((prev) => !prev);
   const [initial, setInitial] = useState(false);
   const formHandler = () => setInitial(true);
 
   const onSubmit = async values => {
-    await updatePassword(values);
-    navigate('/');
+    if (await isVaildUser(values) === 'email') setEmailValid(true);
+    else {
+      await updatePassword(values);
+      navigate('/');
+    }
   }
 
   const formik = useFormik({
@@ -39,7 +43,7 @@ function ForgotPasswordForm() {
   })
 
   const errors = !formik.errors.email && !formik.errors.password && initial;
-  console.log(errors);
+  console.log(errors, formik.values);
   const btnClasses = `${classes.btn} ${errors ? classes.disabled : ''}`;
 
   return (
@@ -56,9 +60,12 @@ function ForgotPasswordForm() {
         }} InputProps={{
           disableUnderline: true,
         }} />
+        {formik.touched.email && formik.errors.email && <div className={classes.errors}>{formik.errors.email}</div>}
+        {emailValid && <div className={classes.errors}>The email you entered doesn't belong to an account. Please check your email and try again.</div>}
         <TextField name='password' {...formik.getFieldProps('password')} id="password" label="Password" size='small' variant='filled' type={showVisibility ? null : "password"} sx={{
           border: '1px solid rgba(219, 219, 219, 1)',
-          borderRadius: '6px'
+          borderRadius: '6px',
+          margin: '1rem 0',
         }}
           InputProps={{
             disableUnderline: true,
@@ -71,7 +78,8 @@ function ForgotPasswordForm() {
             ),
           }}
         />
-        <button disabled={!errors} type='submit' className={btnClasses}>Send Login Link</button>
+        {formik.touched.password && formik.errors.password && <div className={classes.errors}>{formik.errors.password}</div>}
+        <button disabled={!errors} type='submit' className={btnClasses}>Update Password</button>
       </form>
       <OrContainer />
       <a href='/emailsignup'>Create New Account</a>

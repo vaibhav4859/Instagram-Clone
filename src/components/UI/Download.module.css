@@ -1,9 +1,9 @@
 .box{
-    width: 25rem;
+    width: 22rem;
     height: 6rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-    font-size: 1rem;
+    margin-top: 0.8rem;
+    margin-left: 1.3rem;
+    font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,6 +16,10 @@
 }
 
 .images img{
-    height: 3rem;
-    width: 9.5rem;
+    height: 2.5rem;
+    width: 8.5rem;
+}
+
+.playStore {
+    margin-left: 0.5rem;
 }

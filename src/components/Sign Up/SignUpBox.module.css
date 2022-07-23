@@ -1,11 +1,11 @@
 .box{
-    width: 25rem;
-    height: 5rem;
+    width: 22rem;
+    height: 4rem;
     background-color: white;
     border: 1px solid rgba(219, 219, 219, 1);
     border-radius: 1px;
-    margin-left: 2rem;
-    font-size: 1rem;
+    margin-left: 1.3rem;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: center;

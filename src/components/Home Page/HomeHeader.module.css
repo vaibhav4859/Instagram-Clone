@@ -1,13 +1,54 @@
-.header{
+.header {
     display: flex;
+    align-items: center;
     width: 100%;
     height: 4rem;
+    top: 0;
+    left: 0;
+    position: sticky;
     background-color: white;
-    padding-top: 1.2rem;
+    border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 .logo {
     width: 7rem;
-    height: 2rem;
-    margin-left: 14rem;
+    height: 2.2rem;
+    margin-left: 14.5rem;
+}
+
+.box {
+    background-color: rgb(239, 239, 239);
+    width: 16.5rem;
+    height: 2.3rem;
+    margin-left: 13rem;
+    display: flex;
+    align-items: center;
+    outline: none;
+    border-radius: 8px;
+    padding: 1rem;
+    color: rgb(142, 142, 142);
+}
+
+.box input {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    background-color: rgb(239, 239, 239);
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    margin-left: 5.5rem;
+}
+
+.icons img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icons svg {
+    margin-right: 2rem;
+    cursor: pointer;
 }

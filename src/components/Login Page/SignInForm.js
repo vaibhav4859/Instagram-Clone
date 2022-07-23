@@ -20,7 +20,7 @@ const validate = async values => {
         errors.password = 'Sorry, your password was incorrect. Please double-check your password.';
 
     if (!values.email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email))
-        errors.email = `The email you entered doesn't belong to an account. Please check your username and try again.`;
+        errors.email = `The email you entered doesn't belong to an account. Please check your email and try again.`;
 
     return errors;
 };
@@ -71,7 +71,7 @@ const SignInForm = () => {
             <form className={classes['sign-in-form']} onSubmit={formik.handleSubmit} onChange={changeHAndler}>
                 <input className={classes.input} type='email' placeholder='Email' name='email' {...formik.getFieldProps('email')} />
                 <div className={classes['password-container']}>
-                    <input className={classes.input} type={inputType} placeholder='Password' name='password' {...formik.getFieldProps('password')} />
+                    <input className={`${classes.input} ${formik.values.password.length !== 0 ? (inputType === 'password' ? classes.oops : classes.oops2) : ''}`} type={inputType} placeholder='Password' name='password' {...formik.getFieldProps('password')} />
                     {formik.values.password.length !== 0 && <span onClick={showHideHandler}>{inputType === 'password' ? 'Show' : 'Hide'}</span>}
                 </div>
                 <button onClick={btnHandler} disabled={!errors} className={btnClasses} type='submit'>Log In</button>

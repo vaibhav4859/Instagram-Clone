@@ -27,17 +27,15 @@ export async function getUser(userData) {
 }
 
 export async function isVaildUser(userData) {
-    let error;
     const q = query(collection(db, 'users'), where('email', '==', userData.email));
     const documents = await getDocs(q);
     let currUser;
     documents.forEach((doc) => {
         currUser = doc.data();
     });
-    if (!currUser) error = 'email';
+    if (!currUser) return 'email';
     const user = await getUser(userData);
-    if (!user) error = 'password';
-    return error;
+    if (!user) return 'password';
 }
 
 export async function isValidUserSignup(userData) {

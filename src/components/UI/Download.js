@@ -11,7 +11,7 @@ const Download = () => {
                     <img alt='Error' src={AppStore} />
                 </a>
                 <a href='https://play.google.com/store/apps/details?id=com.instagram.android&hl=en_IN&gl=US'>
-                    <img alt='Error' src={PlayStore} style={{marginLeft: '1rem'}} />
+                    <img alt='Error' src={PlayStore} className={classes.playStore} />
                 </a>
             </div>
         </div>

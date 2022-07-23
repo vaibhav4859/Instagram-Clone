@@ -5,7 +5,7 @@ const Login = React.lazy(() => import('./pages/Login'));
 const SignUp = React.lazy(() => import('./pages/SignUp'));
 const ForgotPassword = React.lazy(() => import('./pages/ForgotPassword'));
 const Home = React.lazy(() => import('./pages/Home'));
-// api.js signinform.jss emailsignup.js fb chalu krna chahiye ya ni?
+// api.js signinform.jss emailsignup.js fb chalu krna chahiye ya ni? forgot mei firebase daalna h
 function App() {
   return (
     <div>

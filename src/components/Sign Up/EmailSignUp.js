@@ -69,7 +69,7 @@ const EmailSignUp = () => {
                 <div className={classes.box}>
                     <img alt='Error' src={Logo} className={classes.logo} />
 
-                    <form onSubmit={formik.handleSubmit} onChange={changeHAndler}>
+                    <form className={classes.signup} onSubmit={formik.handleSubmit} onChange={changeHAndler}>
                         <p className={classes.para1}>Sign up to see photos and videos from your friends.</p>
                         <button type='button' className={classes.fbBtn}>
                             <img alt='Error' src='https://cdn.icon-icons.com/icons2/1826/PNG/512/4202107facebookfblogosocialsocialmedia-115710_115591.png' />
@@ -97,8 +97,8 @@ const EmailSignUp = () => {
                             {formik.values.password.length !== 0 && <span className={classes.password} onClick={showHideHandler}>{inputType === 'password' ? 'Show' : 'Hide'}</span>}
                         </div>
 
-                        <p className={classes.para2}>People who use our service may have uploaded <br /> your contact information to Instagram. <a href='https://www.facebook.com/help/instagram/261704639352628'>Learn <br /> More</a></p>
-                        <p className={classes.para2}>By signing up, you agree to our <a href='https://help.instagram.com/581066165581870'>Terms</a> , <a href='https://help.instagram.com/519522125107875/?maybe_redirect_pol=0'>Data <br /> Policy </a>and <a href='https://help.instagram.com/1896641480634370?ref=ig'>Cookies Policy</a> .</p>
+                        <p className={classes.para2}>People who use our service may have uploaded your contact information to Instagram. <a href='https://www.facebook.com/help/instagram/261704639352628'>Learn More</a></p>
+                        <p className={classes.para2}>By signing up, you agree to our <a href='https://help.instagram.com/581066165581870'>Terms</a> , <a href='https://help.instagram.com/519522125107875/?maybe_redirect_pol=0'>Data Policy </a>and <a href='https://help.instagram.com/1896641480634370?ref=ig'>Cookies Policy</a> .</p>
                         <button disabled={!errors} type='submit' className={btnClasses}>Sign Up</button>
                     </form>
                 </div>

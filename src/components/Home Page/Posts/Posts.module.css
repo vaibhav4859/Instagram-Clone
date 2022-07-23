@@ -1,0 +1,117 @@
+.container {
+    background-color: white;
+    width: 100%;
+    height: 58rem;
+    margin-top: 2rem;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 8px;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.head img {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.head a{
+    padding-left: 1rem;
+    font-weight: 600;
+    color: rgb(38, 38, 38);
+}
+
+.head span {
+    display: flex;
+    justify-content: center;
+    margin-left: 62%;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+
+.image{
+    width: 100%;
+    height: 72%;
+}
+
+.activity {
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.8rem;
+}
+
+.activity svg {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.activity svg:hover {
+    color: #8E8E8E;
+}
+
+.save {
+    margin-left: 20rem ;
+}
+
+.likes {
+    padding-left: 0.8rem;
+    padding-top: 0.8rem;
+    color: rgb(38, 38, 38);
+    font-weight: 600;
+}
+
+.caption {
+    display: flex;
+    padding-left: 0.8rem;
+}
+
+.caption span {
+    color: rgb(38, 38, 38);
+    font-weight: 600;
+    padding-right: 0.3rem;
+}
+
+.more {
+    color: rgb(142, 142, 142) !important;
+}
+
+.comments {
+    padding-left: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.8rem;
+    color: rgb(142, 142, 142);
+    cursor: pointer;
+}
+
+.comment-form {
+    display: flex;
+    padding: 1rem;
+}
+
+.comment-form svg {
+    margin-right: 1rem;
+}
+
+.comment-form input {
+    outline: none;
+    font-size: 0.9rem;
+    width: 85%;
+}
+
+.comment-form button {
+    color: rgb(0, 149, 246);
+}
+
+.comment {
+    margin-left: 0.1rem;
+}
+
+.emoji {
+    cursor: pointer;
+}
